@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <header>
+    <h1>CALCULADORA DO INDICE DE MASSA CORPORAL - IMC</h1>
+  <div>
+    <h3><a href="C:\Users\MARCO\Desktop\projetos\repositorio\imc\teste1\entrar.html"> ENTRAR</a></h3>
+  </div>
+    </header>
+    <main>
+    <nav>
+    <img src="balanca.jpg" alt="capa">
+    </nav>
+    <div class="home">
+
+       <a href="index.HTML">HOME</a>
+       <a href="NOTICIAS.HTML">NOTICIAS</a>
+       <a href="CONTATO.HTML">CONTATO</a>
+       <a href="C:\Users\MARCO\Desktop\projetos\repositorio\imc\teste1\cadastrar.html">CADASTRAR</a>
+
+    </div>    
+    <h2 id="Titulo2">O QUE É UMA CALCULADORA IMC?</h2>
+    <p>O Índice de Massa Corporal (IMC) é uma das principais ferramentas, adotada inclusive pela Organização Mundial de Saúde (OMS), para calcular o chamado “peso ideal”. Obtido a partir do peso e da altura do indivíduo, o IMC também aponta níveis de magreza e obesidade, que são usados para nortear o trabalho de profissionais de saúde e de educadores físicos.
+
+        Para obter o IMC, basta dividir o seu peso (em quilos) pela altura (em metros) elevada ao quadrado (altura x altura). De acordo com o indicador, o peso considerado saudável é aquele situado entre 18,5 e 24,9.
+        
+        Os outros marcadores do IMC são:
+    <ul>  
+       <li>  magreza leve (entre 17 e 18,4);</li>
+       <li>  magreza moderada (entre 16 e 16,9);</li>
+       <li>  magreza grave (menor que 16);</li>
+       <li>  sobrepeso (índice de 25 a 29,9);</li>
+       <li>  obesidade grau 1 (30 a 34,9);</li>
+       <li>  obesidade severa (35 a 39,9);</li>
+       <li>  obesidade mórbida (acima de 40);</li>
+    </ul> 
+    </p>
+         <div class="fotoimc">
+        <img src="imc.jpg" alt="foto imc">
+        </div>
+        <p>De acordo com o Ministério da Saúde (MS), atualmente 60% dos brasileiros acima de 18 anos apresentam sobrepeso, e um em cada quatro é considerado obeso. O MS, no entanto, aponta algumas exceções em relação ao índice: 1. crianças, adolescentes e idosos (a partir de 60 anos), que possuem composições corporais específicas; 2. pessoas com muita massa magra (músculos) podem ter IMC mais alto, sem estarem com sobrepeso ou obesidade; 3. mesmo sem estar com sobrepeso ou obesidade, a pessoa pode estar com níveis inadequados de colesterol, triglicérides, gordura e açúcar no sangue, por isso é importante realizar exames regulares; 4. mulheres grávidas.
+
+            Considerada um problema de saúde pública, uma vez que atinge cada vez mais pessoas e está associada ao aumento de risco para doenças cardiovasculares, articulares, hipertensão, diabetes e depressão, entre outras doenças, a obesidade é um problema complexo que envolve uma série de fatores socioambientais. Por isso, a disseminação de informações sobre cuidados com a alimentação e hábitos saudáveis é parte essencial no combate à obesidade.
+            
+            O aplicativo Conecte SUS, do Ministério da Saúde, disponibiliza o botão “Peso saudável”, onde é possível calcular o IMC e obter uma série de dicas e informações sobre o tema. A funcionalidade também está disponível na área "Minha saúde" da e-saúdeSP, a plataforma de saúde paulistana.
+            
+            Nas consultas regulares aos médicos nas Unidades Básicas de Saúde e outros equipamentos da rede pública, os cidadãos podem ter mais informações, orientação e encaminhamento para exames, caso seja necessário.</p>
+    
+    <h2 id="Titulo3">CALCULADORA IMC</h2>
+    <p>O IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa. Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.
+        Uma observação importe, para calcular o indice de massa corporal, tenha ciência de sua altura e peso.</p>
+   <form id="formIMC">
+    <fieldset>
+        <div class="alt">
+            <label>Altura (m)</label>
+            <input type="number" id="altura" step="0.01">
+        </div>
+        <div class="pes">
+            <label>Peso (Kg)</label>
+            <input type="number" id="peso" step="0.01">
+        </div>
+        <div class="bot">
+            <button type="button" onclick="calcularIMC()">Calcular</button>
+            <button type="reset">Limpar</button>
+        </div>
+        <h4>Resultado</h4>
+        <div class="result">
+            <label></label>
+            <output id="resultado">0</output>
+        </div>
+    </fieldset>
+   </form>
+   <script>
+    function calcularIMC() { //get=obert elemente= elemento by=pelo id= identificador 
+        var altura = parseFloat(document.getElementById("altura").value); //parse é um conversor de string para float, e value é um valor atribuido 
+        var peso = parseFloat(document.getElementById("peso").value); //get é obter alguma coisa, nesse caso é obter os elementos altura e peso pelo id
+        var resultado = peso / (altura * altura);
+        document.getElementById("resultado").textContent = resultado.toFixed(2); //"toFixed" pegou o resultado que veio em formato de int e converteu em string
+    } //o textContente pega o resultado através do get
+    </script>
+    <div>
+        <br><br>
+    </div>
+    </main>
+</body>    
+<footer>@Todos os textos foram retirados dos sites <a href="http://https://www.programasaudefacil.com.br/calculadora-de-imc" target="_blank">Boer</a> e <a href="http://https://www.prefeitura.sp.gov.br/cidade/secretarias/saude/noticias/?p=332991#:~:text=%C3%8Dndice%20%C3%A9%20usado%20para%20determinar,indicam%20magreza%2C%20sobrepeso%20e%20obesidade&text=O%20%C3%8Dndice%20de%20Massa%20Corporal,o%20chamado%20%E2%80%9Cpeso%20ideal%E2%80%9D." target="_blank">Prefeitura</a>, site produzido por Marco Aurélio ESC.</footer>
+</html>
